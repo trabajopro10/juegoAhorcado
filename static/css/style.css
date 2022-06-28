@@ -1,0 +1,536 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fondo: #F5F5F5;
+   --cor-de-link: #000;
+   --cor-de-titulos:rgba(34, 12, 12, 0.514);
+   --cor-de-fondo-azul:rgb(167, 230, 255);
+   --cor-cajas:white;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fondo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sección Menu*/
+
+section.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-end;
+    height: 10vh; /* Altura del Viewport  */
+    margin: 0px 153px;
+}
+
+/* Cabecera y espacios */
+header.menu__header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700px;
+    color: var(--cor-de-titulos);
+}
+/*Sección Title*/
+
+section.menu nav ul.menu__list{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 750px;
+
+}
+
+/* Resaltar la sexta 6a opción del menú */
+section.menu nav ul.menu__list li:nth-child(6){
+    color: rgb(90, 5, 5);
+    font-weight: 800;
+}
+
+/* Está la imagen y el texto de quien es la persona */
+section.title{
+    /* Hemos corrido el título mas hacia el centro*/
+    /* y las márgenes nos ayudan a dar ese espacio 
+    /* Hemos dejado en el título  el 20% de ancho disponible*/
+    margin: 0 153px;
+    width: 80%;
+    color: var(--cor-de-titulos);
+}
+
+/* Primer div de la clase titulo  */
+section.title div.title__div{
+    justify-content: space-around;
+    align-content: flex-start;
+    display: flex;
+    /* row-reverse, coloca el texto a su lado contrario y 
+       la imagen al otro lado del texto s*/
+    flex-direction: row-reverse;
+
+}
+
+/* Sección de la imagen 
+   sedan las dimensiones y los angulos redondeados */
+
+section.title img.title__profile{
+    width: 280px;
+    height: 260px;
+    border-radius: 5%;
+}
+
+/* Segundo div de la clase titulo 
+  vemos alli todo el texto con el nombre de la
+  persona */
+
+section.title div.title__container h2{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 61px;
+}
+
+/* h3 del container, donde dice estoy formado */
+section.title div.title__container h3{
+    font-size: 17px;
+    line-height: 23px;
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Items bajo el h3 con el perfile 
+   redes sociales */
+
+section.title ul.title__network{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    font-size: 16px;
+    width: 500px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+/* Sección about, del container en general
+   se dió un espacio interno de 700px  */
+section.about div.about__container{
+    width: 700px;
+}
+
+/* Título del About que dice Sobre mi */
+section.about h3.about__title{
+    font-size: 32px;
+}
+
+/* Sección que habla sobre la persona
+  donde dice desarrollador, veamos que se ha colocado 
+  un fondo de color azul  */
+section.about{
+    padding: 62px 153px;
+    background-color: var(--cor-de-fondo-azul);
+}
+
+/* Sección about, del container para los párrafos */
+section.about div.about__container p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* Skills toda la sección */
+section.skills{
+    margin: 64px 100px; /* Se alinea la sección con todo e iconos */
+
+}
+
+/* Título de la sección Skills */
+section.skills h3.skills__title{
+    font-size: 32px; /* Se agranda el texto del título */
+    text-align: center;
+}
+
+/* Los ïconos de los Skills */
+section.skills div.skills__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Cajas de los Skills que contienen las imágenes  */
+section.skills div.skills__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: var(--cor-cajas);
+    margin: 22px 15px 22px 0px;
+    width: 150px;
+    height: 160px;
+}
+
+/* Imágenes dentro de las cajas de los Skills 
+   en el ul y cada li, se colocan en la ezquina inferior 
+   derecha de la caja gracias al paddin y el margin */
+section.skills div.skills__box ul{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--cor-de-titulos);
+}
+
+/* Hobbies toda la sección */
+section.hobbies{
+    margin: 64px 100px; /* Se alinea la sección con todo e iconos */
+
+}
+
+/* Título de la sección hobbies */
+section.hobbies h3.hobbies__title{
+    font-size: 32px; /* Se agranda el texto del título */
+    text-align: center;
+}
+
+/* Los ïconos de los hobbies */
+section.hobbies div.hobbies__line{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Las cajas que contienen las imágenes */
+section.hobbies div.hobbies__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 16px;
+    background-color: var(--cor-cajas);
+    margin: 22px 15px 22px 0px;
+    width: 150px;
+    height: 160px;
+}
+
+/* Imágenes dentro de las cajas de los Hobbies 
+   en el ul y cada li, se colocan en la ezquina inferior 
+   derecha de la caja gracias al paddin y el margin */
+section.hobbies div.hobbies__box ul{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--cor-de-titulos);
+}
+
+
+/* Experiencia Académica*/
+
+section.academic{
+    margin: 64px 100px; /* Se alinea la sección con todo e iconos */
+    padding: 64px;
+    background-color: var(--cor-de-fondo-azul);
+}
+/* Título Formación académica */
+section.academic h2.academic__title{
+    font-size: 32px; /* Se agranda el texto del título */
+    text-align: center;
+}
+/* Estamos dejand las imágenes de academico una al lado de la otra 
+   y se están alineando al centro su contenido */
+section.academic div.academic__courses{
+    display: flex; /* Ha colocado a uno al lado del otro icono */
+    text-align: center; /* Alineación interna de cada formación académica*/
+    justify-content: space-around;
+}
+
+/* Las cajas que contienen las imágenes de la sección academia */
+section.academic div.academic__courses__box{
+    width: 26.6rem; /* Recordemos este concepto ???*/
+    margin: 0 1rem; /* Margen, espacio entre las cajas */
+    /*background-color: var(--cor-cajas);*/
+}
+
+section.academic ul.academic__courses__list li:nth-child(1){
+    padding-top: 30px;
+    background-color: var(--cor-cajas);
+    justify-content: space-around;
+    width: 250px;
+    height: 200px;
+}
+/* Titulo de cada formación académica*/
+section.academic ul.academic__courses__list h4{
+    text-align:  left;
+}
+
+/* Subtitulo de cada formación Académica */
+section.academic ul.academic__courses__list p{
+    text-align:  left;
+}
+
+
+/* experiencia*/
+
+section.experience{
+    text-align: center;
+    margin: 64px 100px; /* Se alinea la sección con todo e iconos */
+    padding: 64px;
+}
+
+#idcodsecreto{
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+
+#idjuegoAhorcado{
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+#idencritador{
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#idjuegoAhorcado2{
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+#idcodsecreto3{
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+/* Botón demo */
+section.experience div.experience__description .experience__botao--demo{
+    background-color: rgb(51, 77, 228);
+    color: white;
+    font-size: 15;
+    padding: 10px 10px;
+    width: 40%;
+    border-color: rgb(0, 89, 255);
+    border-width: 2px;
+    box-sizing: border-box;
+
+}
+/* Botón respositorio */
+section.experience div.experience__description .experiencia__botao--repo{
+    color: var(--cor-de-titulos);
+    font-size: 15;
+    padding: 10px 10px;
+    width: 40%;
+    border-color: rgb(127, 134, 138);
+    border-width: 2px;
+    box-sizing: border-box;
+
+}
+
+/* Cuano pase por encima del botón de Ver demo*/
+section.experience div.experience__description .experience__botao--demo:hover{
+    color: #e8eaebf8; /* Color del texto en el producto*/
+    border-color: #5c5cd8e8; /* Color del texto en el border de la imagen*/
+    text-decoration: underline; /* Underline texto del producto*/
+}
+
+/* Cuano pase por encima del botón de Repositorio */
+section.experience div.experience__description .experiencia__botao--repo:hover{
+    color: #141292f8; /* Color del texto en el producto*/
+    border-color: #919113f8; /* Color del texto en el border de la imagen*/
+    text-decoration: underline; /* Underline texto del producto*/
+}
+
+/*Contacto*/
+
+/*  Imagen de teléfono y contacto */
+section.formcontato div.formcontato__contacto{
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Formulario de contacto */
+section.formcontato div.formcontato__text form{
+    /* Separamos un poco el formulario de sus vecinos 40px para arriba y abajo 
+       y cero hacia la derecha y a la izquierda*/
+    margin: 40px 0;
+}
+
+form.formcontato__form label,  p,  legend{
+    /* al colocar display block, estamos colocando los elementos de forma vertical */
+    display: block;
+    font-size: 20px;
+    /* tamaño de letra 20px y margin de 0 arriba y abajo y 10px a la izquierda */
+    margin: 0 0 10px;
+}
+
+section.formcontato div.formcontato__text{
+    text-align: left;
+}
+
+/* Campos de entrada de los inputs del formulario de contacto */
+form.formcontato__form input{
+    /* al colocar display block, estamos colocando los elementos de forma vertical */
+   display: block;
+   margin: 0 0 20px;
+   /* padding amplia por así decirlo los espacios donde el usuario coloca la información,
+   espacio entre el borde y el contenido */
+   padding: 10px 25px;
+   /* de los 940 que se dan en el main, los input van a ocupar el 50% de ese espacio */
+   width: 100%;
+
+}
+
+section.formcontato{
+    display: flex;
+    text-align: center;
+    margin: 64px 100px; /* Se alinea la sección con todo e iconos */
+    padding: 64px;
+}
+
+section.formcontato .formcontato__text{
+    margin: 10px;
+}
+
+section.formcontato .formcontato__text .formcontato__title{
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 800;
+}
+section.formcontato .formcontato__text .formcontato__input{
+    display: flex;
+    height: 30px;
+}
+
+section.formcontato .formcontato__text .formcontato__textarea{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+section.formcontato div.formcontato__text .formcontato__form .formcontato__botao{
+    display: flex;
+    margin-top: 50px;
+    background-color: rgb(51, 77, 228);
+    color: white;
+    font-size: 15;
+    padding: 10px 10px;
+    width: 20%;
+    border-color: rgb(0, 89, 255);
+    border-width: 2px;
+    box-sizing: border-box;
+    justify-content: center;
+
+}
+
+/*footeer*/
+
+section.footer{
+   
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sección sobre mi*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+ /*Contacto*/
+
+/*Footer*/
+
+}

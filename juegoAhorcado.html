@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/ahorcado.css">
+    <script src="static/js/ahorcado.js"></script>
+    <title>JuegoAhorcado
+    </title>
+</head>
+<body>
+    <main class="clsmain">
+        <h1>Juego del Ahorcado veamos si somos capaces de adivinar la palabra</h1>
+        <div id="idditext" class="clsdivcaja">
+            <form id="idFormulario" class="clsformulario">
+                <label for="mensaje">MsgAhorcado</label>
+                    <p>
+                        El Juego del ahorcado, le da la posibilidad de adivinar una palabra o frase colocando letra a letra; o en el momento que la identifique, puede escribirla sin problema, en Frase ganadora.  !!Suerte..! 
+                    </p>
+                <label for="fraseopalabra">Frase buscada</label>
+                    <input type="password" id="idfraseopalabra" class="input-padre" required placeholder="Frase o Palabra.."  value="">
+                <label for="fraseganadora">Frase ganadora</label>
+                    <div  class="clsgrupoFrase" id="idDiv1">
+                        <input type="text" id="idletra1" class="input-letra" >
+                        <input type="text" id="idletra2" class="input-letra" >
+                        <input type="text" id="idletra3" class="input-letra" >
+                        <input type="text" id="idletra4" class="input-letra" >
+                        <input type="text" id="idletra5" class="input-letra" >
+                        <input type="text" id="idletra6" class="input-letra" >
+                        <input type="text" id="idletra7" class="input-letra" >
+                        <input type="text" id="idletra8" class="input-letra" >
+                        <input type="text" id="idletra9" class="input-letra" >
+                        <input type="text" id="idletra10" class="input-letra" >
+                        <input type="text" id="idletra11" class="input-letra" >
+                        <input type="text" id="idletra12" class="input-letra" >
+                        <input type="text" id="idletra13" class="input-letra" >
+                        <input type="text" id="idletra14" class="input-letra" >
+                        <input type="text" id="idletra15" class="input-letra"></p>
+                    </div>         
+                <label for="letras">Letras</label>
+                    <input type="text" id="idletra16" class="input-letra2" ></p>
+                
+                <label for="quepasa">Que está pasando</label>
+                <textarea  rows="10" id="idquepasa" class="input-padre" readonly></textarea>
+                <p id="idexplicacion">
+                    COMO JUGAR:
+                    Para jugar usted debe colocar la frase buscada en primer lugar. 
+                    Para iniciar a comparar cada letra con las letras de la frase debemos colocar la letra a identificar dentro del campo Letras y al salir del campo Letras, ahi se hace la comparación, encaso de no coincidir empieza a mostrar las imágenes y los mensajes del ahorcado. Si la persona conoce la frase antes de terminar de comparar, entonces puede llenar los cajones en Frase Ganadora y tambien ingresar y salir del campo Letras para que se haga nuevamente la comparación entre la frase y lo que se ha escrito y diga que la frase es correcta. 
+                </p>    
+            </form>
+            <div id="iddivimg">
+                <img id="idImagen" class="nomostrarImagen" src="static/img/ahorcado1.jpg" placeholder="Aquí le vamos diciendo como va.." >
+            </div>
+
+        </div>
+</main>
+    <script>
+        fnLetras();
+    </script>
+</body>
+</html>

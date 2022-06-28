@@ -1,0 +1,153 @@
+main .clsmain{
+    display: flex;
+    width: 60%;
+   /* align-items: center;*/
+    margin-left: 20px;
+}
+
+.input-padre{
+    /* al colocar display block, estamos colocando los elementos de forma vertical */
+   display: block;
+   margin: 0 0 0px;
+   /* padding amplia por así decirlo los espacios donde el usuario coloca la información,
+   espacio entre el borde y el contenido */
+   padding: 10px 10px;
+   /* de los 940 que se dan en el main, los input van a ocupar el 50% de ese espacio */
+   width: 50%;
+   color:saddlebrown
+   /*justify-content: left;*/
+   
+
+}
+main h1{
+    text-align: center;
+    margin-left: 10px;
+}
+
+p{
+   margin: 0 0 1em;
+   width: 50%;
+   text-align: justify;
+   font-size: 20px;
+   font-weight: 700;
+   color:rgb(104, 6, 22);
+}
+
+#idexplicacion{
+    margin: 0 0 1em;
+    width: 50%;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 700;
+    color:rgba(30, 8, 230, 0.918);
+
+}
+
+form label{
+    font-size: 20px;
+    font-weight: 700;
+    color:maroon;
+}
+
+.input-letra{
+   width: 10px;
+   font-weight: 700;
+   color:sienna;
+}
+
+.input-letra2{
+    width: 10px;
+    font-weight: 700;
+    color:sienna;
+ }
+
+.clsdivcaja{
+    display: flex;
+    width: 60%;
+    margin-left: 400px;
+    flex-direction: row;
+    /*justify-content: space-around;
+    align-content: flex-start;*/
+    display: flex;
+    align-items: center;
+}
+
+.mostrarImagen {
+    display: block;
+}
+
+.nomostrarImagen {
+    display: none;
+}
+
+#idfraseopalabra{
+    input-security: t;
+}
+
+.clsnover {
+    display: none;
+}
+
+/* Evita que salga un Ojo para revelar el texto del campo */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/* Le estamos diciendo si encuenta una pantalla con hasta 480 px, osea que 
+   la pantalla máxima será de 480px de alli en adelante se determina
+   hacer otras acciones  */
+
+   @media screen and (max-width:480px){
+    main{
+        width: auto;
+    }
+
+    div{
+        width: auto;
+    }
+    /* Alineará al centro el contenido */
+    h1{
+        text-align: center;
+    }
+    /* dejará en un lugar estático lo contenido en nav */
+    nav{
+        position: static;
+    }
+    /* Con el auto, obligaremos a estas clases a acomordarse respecto de la resolución
+       de las pantallas que las contengan */
+    .clsdivcaja, .input-padre, .input-letra, .input-letra2, .nomostrarImagen, .mostrarImagen{
+        width: auto;
+
+    }
+    /* La lista está ocupando el 40% del espacio y al lado está la imagen con el 60%
+       para que se vean bien, se coloca que en pantallas móviles menores e iguales 
+       a 480px se ocupe todo el espacio. */
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px){
+    /* Alineará al centro el contenido */
+    h1{
+        text-align: center;
+    }
+    /* dejará en un lugar estático lo contenido en nav */
+    nav{
+        position: static;
+    }
+    /* Con el auto, obligaremos a estas clases a acomordarse respecto de la resolución
+       de las pantallas que las contengan */
+    .clsdivcaja, .clsmain, .divmapa-contenido, .contenido-diferenciales, .clvideo{
+        width: auto;
+        margin: auto;
+
+    }
+    /* La lista está ocupando el 40% del espacio y al lado está la imagen con el 60%
+       para que se vean bien, se coloca que en pantallas móviles menores e iguales 
+       a 480px se ocupe todo el espacio. */
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
